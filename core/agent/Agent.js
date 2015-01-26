@@ -28,3 +28,4 @@ Agent.prototype.percepts = {};
 Agent.prototype.effects = { actions: {} };
 Agent.prototype.behavior = {};
 
+
