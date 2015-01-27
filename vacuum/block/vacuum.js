@@ -24,7 +24,7 @@ var cells = [];
 for (var i = 0; i <= 9; i++) {
     cells[i] = [];
     for (var j = 0; j <= 9; j++) {
-        cells[i][j] = clone(cellBlock);
+        cells[i][j] = cellBlock.instantiate();
         cells[i][j].position_x = i;
         cells[i][j].position_y = j;
         cells[i][j].dirty = false;

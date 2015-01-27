@@ -24,7 +24,9 @@ var Block = function(object) {
         }
     }
 
-
 };
 
 Block.prototype.class = "block";
+Block.prototype.instantiate = function() {
+    return clone(this);
+}
