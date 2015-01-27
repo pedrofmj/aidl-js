@@ -1,4 +1,4 @@
-var cellBlock = new Block({ /* TODO Handle the number of instances of the same block description. In the example, we must have 100 cells (a 10x10 grid) */
+var cellBlock = new Block({
     class: block,
     properties: {
         position_x: {
@@ -18,3 +18,15 @@ var cellBlock = new Block({ /* TODO Handle the number of instances of the same b
 });
 
 var blocks = [cellBlock];
+
+var cells = [];
+
+for (var i = 0; i <= 9; i++) {
+    cells[i] = [];
+    for (var j = 0; j <= 9; j++) {
+        cells[i][j] = clone(cellBlock);
+        cells[i][j].position_x = i;
+        cells[i][j].position_y = j;
+        cells[i][j].dirty = false;
+    }
+}

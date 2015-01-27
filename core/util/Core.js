@@ -1,13 +1,11 @@
-Object.prototype.clone = function() {
+function clone(object) {
 
-    var result = this.constructor();
+    var result = {};
 
-    for (var key in this) {
-        if (this.hasOwnProperty(key)) {
-            result[key] = this[key];
-        }
+    for (var key in object) {
+        result[key] = object[key];
     }
 
-    return result;
+    return this;
 
 };

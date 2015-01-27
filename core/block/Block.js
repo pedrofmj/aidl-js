@@ -1,11 +1,11 @@
 /**
  * A Block
- * @param {Object} object
+ * @param {object} object
  * @constructor
  */
 var Block = function(object) {
 
-    this.class = object.class;
+    this.class = block;
 
     for (var propertyName in object.properties) {
         var propertyDescription = object.properties[propertyName];
@@ -23,6 +23,7 @@ var Block = function(object) {
                 this[propertyName] = null;
         }
     }
+
 
 };
 
